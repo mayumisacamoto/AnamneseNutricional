@@ -10,67 +10,37 @@
     <header>
         <h1>Anamnese Nutricional - Homem Atleta</h1>
     </header>
-    <form action="processa_anamnese.php" method="POST">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
 
-        <label for="idade">Idade:</label>
-        <input type="number" id="idade" name="idade" required>
+    <section class="form-section">
+        <form action="sucesso.html" method="POST">
+            <!-- Campos do formulário -->
+            <input type="text" name="nome" placeholder="Nome" required>
+            <input type="number" name="idade" placeholder="Idade" required>
+            <input type="number" name="altura" placeholder="Altura (cm)" required>
+            <input type="number" name="peso" placeholder="Peso (kg)" required>
+            
+            <select name="objetivo" required>
+                <option value="">Objetivo com a nutrição</option>
+                <option value="emagrecimento">Emagrecimento</option>
+                <option value="ganho de massa">Ganho de Massa</option>
+                <option value="desempenho esportivo">Desempenho Esportivo</option>
+            </select>
 
-        <label for="altura">Altura (cm):</label>
-        <input type="number" id="altura" name="altura" required>
+            <textarea name="condicoes_saude" placeholder="Condições de saúde" required></textarea>
 
-        <label for="peso">Peso (kg):</label>
-        <input type="number" id="peso" name="peso" required>
+            <!-- Frequência de treinos (campo adicional para atletas) -->
+            <input type="text" name="frequencia_treinos" placeholder="Frequência de treinos" required>
 
-        <label for="profissao">Profissão:</label>
-        <input type="text" id="profissao" name="profissao" required>
+            <!-- Botão de envio -->
+            <button type="submit">Enviar Anamnese</button>
+        </form>
+    </section>
 
-        <label for="objetivo">Objetivo com a nutrição:</label>
-        <select id="objetivo" name="objetivo" required>
-            <option value="emagrecimento">Emagrecimento</option>
-            <option value="ganho_massa">Ganho de Massa</option>
-            <option value="desempenho">Desempenho Esportivo</option>
-        </select>
-
-        <label for="condicoes_saude">Condições de Saúde:</label>
-        <textarea id="condicoes_saude" name="condicoes_saude"></textarea>
-
-        <label for="atividade_fisica">Nível de Atividade Física:</label>
-        <select id="atividade_fisica" name="atividade_fisica" required>
-            <option value="sedentario">Sedentário</option>
-            <option value="moderado">Moderado</option>
-            <option value="ativo">Ativo</option>
-            <option value="atleta">Atleta</option>
-        </select>
-
-        <label for="rotina_alimentar">Rotina Alimentar Atual:</label>
-        <textarea id="rotina_alimentar" name="rotina_alimentar"></textarea>
-
-        <label for="preferencias">Preferências Alimentares:</label>
-        <textarea id="preferencias" name="preferencias"></textarea>
-
-        <label for="aversoes">Aversões Alimentares:</label>
-        <textarea id="aversoes" name="aversoes"></textarea>
-
-        <label for="historico_familiar">Histórico Familiar de Doenças:</label>
-        <textarea id="historico_familiar" name="historico_familiar"></textarea>
-
-        <label for="suplementos">Suplementos Utilizados:</label>
-        <textarea id="suplementos" name="suplementos"></textarea>
-
-        <label for="frequencia_treinos">Frequência e Tipo de Treinos:</label>
-        <textarea id="frequencia_treinos" name="frequencia_treinos"></textarea>
-
-        <button type="submit">Enviar Anamnese</button>
-    </form>
     <footer>
-        <p>Gabriela Marquezin Dmenjeon – Nutricionista (CRN8 13371)</p>
+        <p>Gabriela Marquezin Dmejeon – Nutricionista (CRN8 13371)</p>
         <p>INSPIRAR - Centro de Bem-Estar e Saúde | Avenida Brasil, Nº 628, Manoel Ribas, PR</p>
-        <p>📱 Atendimento presencial e online | WhatsApp: <a href="https://wa.me/43998441276">wa.me/43998441276</a></p>
-        <p>Instagram: <a href="https://www.instagram.com/nutri_gabimarquezin">@nutri_gabimarquezin</a></p>
+        <p>Atendimento presencial e online | <a href="https://wa.me/43998441276" target="_blank">WhatsApp</a></p>
+        <p>Instagram: <a href="https://instagram.com/nutri_gabimarquezin" target="_blank">@nutri_gabimarquezin</a></p>
     </footer>
 </body>
 </html>
-
-
