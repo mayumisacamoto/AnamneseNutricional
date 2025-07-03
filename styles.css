@@ -10,9 +10,10 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f8f8; /* Fundo suave */
     color: #333;
-    min-height: 100vh; /* Garante que a altura ocupe 100% da tela */
+    min-height: 100vh; /* Garante que a altura da página ocupe 100% da tela */
     display: flex;
     flex-direction: column;
+    justify-content: space-between; /* Garante que o conteúdo se distribua sem sobrepor o rodapé */
 }
 
 /* Estilo do cabeçalho */
@@ -60,12 +61,15 @@ a:hover {
 footer {
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
     background-color: #4CAF50;
     color: white;
     text-align: center;
-    padding: 15px;
+    padding: 15px 0;
     font-size: 14px;
+    z-index: 100;
+    font-family: 'Georgia', serif;
 }
 
 /* Estilo do formulário */
@@ -73,9 +77,15 @@ form {
     max-width: 600px;
     margin: 40px auto;
     padding: 30px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    background-image: url('folhagem.jpg'); /* Folhagens no fundo do formulário */
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 20px; /* Para não sobrepor com a barra fixa */
 }
 
 /* Estilo dos campos de entrada */
@@ -96,7 +106,7 @@ input:focus, select:focus, textarea:focus {
     outline: none;
 }
 
-/* Estilo do botão de envio */
+/* Botão de envio */
 button {
     padding: 14px;
     background-color: #4CAF50;
@@ -127,6 +137,9 @@ button:hover {
     }
     button {
         font-size: 16px;
+    }
+    footer {
+        font-size: 14px;
     }
 }
 
