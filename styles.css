@@ -8,11 +8,10 @@
 /* Corpo da página */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f2f5; /* Fundo suave e clean */
+    background-color: #f0f2f5; /* Fundo suave */
     color: #333;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     min-height: 100vh;
 }
 
@@ -34,49 +33,100 @@ h1 {
 
 /* Estilo do conteúdo principal */
 .main-content {
-    text-align: center;
-    margin-top: 50px;
-    padding: 20px;
     flex-grow: 1;
+    padding: 30px 20px;
+    text-align: center;
 }
 
+/* Estilo da mensagem de boas-vindas */
 h2 {
     color: #333;
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 30px;
-    font-weight: 500;
 }
 
-/* Estilo dos botões de escolha de perfil */
+/* Estilo do formulário */
+form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Estilo dos campos de entrada */
+input, select, textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+/* Estilo de foco nos campos de entrada */
+input:focus, select:focus, textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Título do formulário */
+h2 {
+    color: #4CAF50;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Botões de envio do formulário */
+button {
+    padding: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo dos links de perfil */
 .button-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Espaço entre os botões */
+    gap: 20px;
 }
 
 .profile-button {
-    display: inline-block;
     text-decoration: none;
     color: #fff;
-    background-color: #4CAF50; /* Cor verde suave */
-    padding: 16px 35px;
+    background-color: #4CAF50;
+    padding: 14px 30px;
     margin: 10px;
     border: 2px solid #4CAF50;
-    border-radius: 30px; /* Bordas arredondadas */
-    font-size: 18px;
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
-    font-weight: bold;
-    text-transform: uppercase;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .profile-button:hover {
-    background-color: #45a049; /* Cor quando o mouse passa por cima */
+    background-color: #45a049;
     color: #fff;
-    transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
 }
 
-/* Estilo do rodapé fixo */
+/* Rodapé fixo */
 footer {
     position: fixed;
     bottom: 0;
@@ -88,16 +138,6 @@ footer {
     padding: 15px 0;
     font-size: 14px;
     z-index: 100;
-    font-family: 'Georgia', serif;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
 }
 
 /* Responsividade */
@@ -106,18 +146,20 @@ footer a:hover {
         padding: 20px 0;
     }
 
-    h1 {
-        font-size: 28px;
+    form {
+        padding: 20px;
+    }
+
+    button {
+        font-size: 16px;
     }
 
     .profile-button {
-        padding: 14px 30px;
-        font-size: 16px;
+        padding: 12px 25px;
+        font-size: 14px;
     }
 
     footer {
         font-size: 12px;
     }
 }
-
-
