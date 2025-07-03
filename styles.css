@@ -12,7 +12,7 @@ body {
     color: #333;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; /* Garante que a altura da página ocupe 100% da tela */
 }
 
 /* Estilo do cabeçalho */
@@ -56,6 +56,7 @@ form {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+    margin-bottom: 120px; /* Garante que o formulário não seja sobreposto pelo rodapé */
 }
 
 /* Estilo dos campos de entrada */
