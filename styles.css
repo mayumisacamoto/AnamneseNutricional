@@ -42,18 +42,20 @@ h2 {
 a {
     display: inline-block;
     text-decoration: none;
-    color: #4CAF50;
+    color: #fff;
+    background-color: #4CAF50; /* Cor verde suave */
     padding: 12px 25px;
     margin: 10px;
-    background-color: #fff;
     border: 2px solid #4CAF50;
     border-radius: 25px;
     font-size: 16px;
     transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+    font-weight: bold;
 }
 
 a:hover {
-    background-color: #4CAF50;
+    background-color: #45a049; /* Cor quando o mouse passa por cima */
     color: #fff;
 }
 
@@ -142,4 +144,5 @@ button:hover {
         font-size: 14px;
     }
 }
+
 
