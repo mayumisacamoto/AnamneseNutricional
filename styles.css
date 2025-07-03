@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anamnese Nutricional - Homem Atleta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Anamnese Nutricional - Homem Atleta</h1>
+    </header>
+    <form action="processa_anamnese.php" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade" required>
+
+        <label for="altura">Altura (cm):</label>
+        <input type="number" id="altura" name="altura" required>
+
+        <label for="peso">Peso (kg):</label>
+        <input type="number" id="peso" name="peso" required>
+
+        <label for="profissao">Profissão:</label>
+        <input type="text" id="profissao" name="profissao" required>
+
+        <label for="objetivo">Objetivo com a nutrição:</label>
+        <select id="objetivo" name="objetivo" required>
+            <option value="emagrecimento">Emagrecimento</option>
+            <option value="ganho_massa">Ganho de Massa</option>
+            <option value="desempenho">Desempenho Esportivo</option>
+        </select>
+
+        <label for="condicoes_saude">Condições de Saúde:</label>
+        <textarea id="condicoes_saude" name="condicoes_saude"></textarea>
+
+        <label for="atividade_fisica">Nível de Atividade Física:</label>
+        <select id="atividade_fisica" name="atividade_fisica" required>
+            <option value="sedentario">Sedentário</option>
+            <option value="moderado">Moderado</option>
+            <option value="ativo">Ativo</option>
+            <option value="atleta">Atleta</option>
+        </select>
+
+        <label for="rotina_alimentar">Rotina Alimentar Atual:</label>
+        <textarea id="rotina_alimentar" name="rotina_alimentar"></textarea>
+
+        <label for="preferencias">Preferências Alimentares:</label>
+        <textarea id="preferencias" name="preferencias"></textarea>
+
+        <label for="aversoes">Aversões Alimentares:</label>
+        <textarea id="aversoes" name="aversoes"></textarea>
+
+        <label for="historico_familiar">Histórico Familiar de Doenças:</label>
+        <textarea id="historico_familiar" name="historico_familiar"></textarea>
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+.buttons {
+    text-align: center;
+    margin: 20px;
+}
+
+.btn {
+    padding: 15px 30px;
+    margin: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button {
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
