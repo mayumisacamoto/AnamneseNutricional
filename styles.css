@@ -1,4 +1,4 @@
-/* Reset de margens e padding */
+/* Reset geral */
 * {
     margin: 0;
     padding: 0;
@@ -8,111 +8,125 @@
 /* Corpo da página */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7; /* Fundo suave */
+    background-color: #f8f8f8; /* Fundo suave */
     color: #333;
-    background-image: url('folhagem.jpg'); /* Caminho para a imagem de folhagens */
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh; /* Garante que a altura da página ocupe 100% da tela */
+    min-height: 100vh; /* Garante que a altura ocupe 100% da tela */
     display: flex;
     flex-direction: column;
-    padding-bottom: 120px; /* Garantir que o formulário não fique atrás do rodapé */
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #4CAF50; /* Cor verde suave */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-family: 'Georgia', serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Estilo da mensagem de boas-vindas */
+h2 {
+    color: #333;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Links de escolha do perfil */
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #4CAF50;
+    padding: 12px 25px;
+    margin: 10px;
+    background-color: #fff;
+    border: 2px solid #4CAF50;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a:hover {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+/* Estilo do rodapé fixo */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
 }
 
 /* Estilo do formulário */
 form {
     max-width: 600px;
-    margin: 30px auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
     border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 1;
-    background-image: url('folhagem.jpg'); /* Folhagens no fundo do formulário */
-    background-size: cover;
-    background-position: center;
-    border: 1px solid rgba(0, 0, 0, 0.1); /* Leve borda para destacar */
-    padding-bottom: 20px; /* Para não sobrepor com a barra fixa */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Título do formulário */
-h1 {
-    color: #4CAF50;
-    text-align: center;
-    font-size: 26px;
-    font-family: 'Georgia', serif; /* Fonte elegante */
-    margin-bottom: 30px;
-}
-
-/* Estilo dos campos do formulário */
+/* Estilo dos campos de entrada */
 input, select, textarea {
     width: 100%;
-    padding: 15px;
+    padding: 14px;
     margin: 10px 0;
     border: 2px solid #ddd;
-    border-radius: 10px;
+    border-radius: 8px;
     font-size: 16px;
-    background-color: #fff;
-    transition: border-color 0.3s ease-in-out;
-    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
 }
 
-/* Estilo dos campos ao focar */
+/* Estilo de foco nos campos de entrada */
 input:focus, select:focus, textarea:focus {
     border-color: #4CAF50;
     outline: none;
 }
 
-/* Botão de envio */
+/* Estilo do botão de envio */
 button {
-    padding: 16px 30px;
+    padding: 14px;
     background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
     width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
     background-color: #45a049;
 }
 
-/* Barra de informações fixa no rodapé */
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 16px;
-    z-index: 100;
-    font-family: 'Georgia', serif;
-}
-
 /* Responsividade */
 @media (max-width: 768px) {
+    header {
+        padding: 15px 0;
+    }
     form {
-        padding: 15px;
-        width: 90%;
+        padding: 20px;
+        margin: 20px;
     }
-
     h1 {
-        font-size: 22px;
+        font-size: 26px;
     }
-
     button {
         font-size: 16px;
-    }
-
-    footer {
-        font-size: 14px;
     }
 }
 
