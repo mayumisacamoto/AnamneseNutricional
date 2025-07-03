@@ -38,8 +38,16 @@ h2 {
     margin-top: 20px;
 }
 
-/* Links de escolha do perfil */
-a {
+/* Estilo dos botões de escolha do perfil */
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaço entre os botões */
+    margin-top: 30px;
+}
+
+.profile-button {
     display: inline-block;
     text-decoration: none;
     color: #fff;
@@ -54,7 +62,7 @@ a {
     font-weight: bold;
 }
 
-a:hover {
+.profile-button:hover {
     background-color: #45a049; /* Cor quando o mouse passa por cima */
     color: #fff;
 }
