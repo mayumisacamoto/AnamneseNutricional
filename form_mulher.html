@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <h1>Anamnese Nutricional - Mulher</h1>
     </header>
 
     <section class="form-section">
         <form action="sucesso.html" method="POST">
-            <!-- Campos do formulário -->
             <div class="form-group">
                 <label for="nome">Nome Completo</label>
                 <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
@@ -29,6 +28,10 @@
             <div class="form-group">
                 <label for="peso">Peso (kg)</label>
                 <input type="number" name="peso" id="peso" placeholder="Digite seu peso" required>
+            </div>
+            <div class="form-group">
+                <label for="ocupacao">Ocupação</label>
+                <input type="text" name="ocupacao" id="ocupacao" placeholder="Sua ocupação profissional" required>
             </div>
             <div class="form-group">
                 <label for="objetivo">Objetivo com a nutrição</label>
@@ -48,7 +51,7 @@
                 <textarea name="historico_familiar" id="historico_familiar" placeholder="Descreva seu histórico familiar" required></textarea>
             </div>
             <div class="form-group">
-                <label for="frequencia_treinos">Frequência de treinos (caso aplique)</label>
+                <label for="frequencia_treinos">Frequência de treinos (se aplica)</label>
                 <input type="text" name="frequencia_treinos" id="frequencia_treinos" placeholder="Quantos dias por semana treina?" required>
             </div>
             <div class="form-group">
