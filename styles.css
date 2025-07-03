@@ -8,10 +8,11 @@
 /* Corpo da página */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f8f8; /* Fundo suave */
+    background-color: #f0f2f5; /* Fundo suave e clean */
     color: #333;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     min-height: 100vh;
 }
 
@@ -21,26 +22,29 @@ header {
     color: white;
     text-align: center;
     padding: 40px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras suaves para destacar */
 }
 
 h1 {
     font-family: 'Georgia', serif;
     font-size: 32px;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 /* Estilo do conteúdo principal */
 .main-content {
-    flex-grow: 1; /* Garantir que o conteúdo ocupe o espaço disponível */
     text-align: center;
-    margin-top: 30px;
+    margin-top: 50px;
+    padding: 20px;
+    flex-grow: 1;
 }
 
-/* Estilo da mensagem de boas-vindas */
 h2 {
     color: #333;
-    font-size: 20px;
+    font-size: 24px;
     margin-bottom: 30px;
+    font-weight: 500;
 }
 
 /* Estilo dos botões de escolha de perfil */
@@ -56,18 +60,20 @@ h2 {
     text-decoration: none;
     color: #fff;
     background-color: #4CAF50; /* Cor verde suave */
-    padding: 12px 25px;
+    padding: 16px 35px;
     margin: 10px;
     border: 2px solid #4CAF50;
-    border-radius: 25px;
-    font-size: 16px;
-    transition: background-color 0.3s, color 0.3s;
+    border-radius: 30px; /* Bordas arredondadas */
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .profile-button:hover {
     background-color: #45a049; /* Cor quando o mouse passa por cima */
     color: #fff;
+    transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
 }
 
 /* Estilo do rodapé fixo */
@@ -105,12 +111,13 @@ footer a:hover {
     }
 
     .profile-button {
-        padding: 12px 20px;
-        font-size: 14px;
+        padding: 14px 30px;
+        font-size: 16px;
     }
 
     footer {
         font-size: 12px;
     }
 }
+
 
