@@ -10,10 +10,9 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f8f8; /* Fundo suave */
     color: #333;
-    min-height: 100vh; /* Garante que a altura da página ocupe 100% da tela */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Garante que o conteúdo se distribua sem sobrepor o rodapé */
+    min-height: 100vh;
 }
 
 /* Estilo do cabeçalho */
@@ -21,30 +20,35 @@ header {
     background-color: #4CAF50; /* Cor verde suave */
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 40px 0;
 }
 
 h1 {
     font-family: 'Georgia', serif;
-    font-size: 30px;
+    font-size: 32px;
     font-weight: bold;
+}
+
+/* Estilo do conteúdo principal */
+.main-content {
+    flex-grow: 1; /* Garantir que o conteúdo ocupe o espaço disponível */
+    text-align: center;
+    margin-top: 30px;
 }
 
 /* Estilo da mensagem de boas-vindas */
 h2 {
     color: #333;
-    text-align: center;
-    font-size: 18px;
-    margin-top: 20px;
+    font-size: 20px;
+    margin-bottom: 30px;
 }
 
-/* Estilo dos botões de escolha do perfil */
+/* Estilo dos botões de escolha de perfil */
 .button-container {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px; /* Espaço entre os botões */
-    margin-top: 30px;
 }
 
 .profile-button {
@@ -58,7 +62,6 @@ h2 {
     border-radius: 25px;
     font-size: 16px;
     transition: background-color 0.3s, color 0.3s;
-    text-align: center;
     font-weight: bold;
 }
 
@@ -82,75 +85,32 @@ footer {
     font-family: 'Georgia', serif;
 }
 
-/* Estilo do formulário */
-form {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 30px;
-    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 1;
-    background-image: url('folhagem.jpg'); /* Folhagens no fundo do formulário */
-    background-size: cover;
-    background-position: center;
-    padding-bottom: 20px; /* Para não sobrepor com a barra fixa */
-}
-
-/* Estilo dos campos de entrada */
-input, select, textarea {
-    width: 100%;
-    padding: 14px;
-    margin: 10px 0;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    font-size: 16px;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s;
-}
-
-/* Estilo de foco nos campos de entrada */
-input:focus, select:focus, textarea:focus {
-    border-color: #4CAF50;
-    outline: none;
-}
-
-/* Botão de envio */
-button {
-    padding: 14px;
-    background-color: #4CAF50;
+footer a {
     color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    width: 100%;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    text-decoration: none;
 }
 
-button:hover {
-    background-color: #45a049;
+footer a:hover {
+    text-decoration: underline;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     header {
-        padding: 15px 0;
+        padding: 20px 0;
     }
-    form {
-        padding: 20px;
-        margin: 20px;
-    }
+
     h1 {
-        font-size: 26px;
+        font-size: 28px;
     }
-    button {
-        font-size: 16px;
-    }
-    footer {
+
+    .profile-button {
+        padding: 12px 20px;
         font-size: 14px;
     }
-}
 
+    footer {
+        font-size: 12px;
+    }
+}
 
