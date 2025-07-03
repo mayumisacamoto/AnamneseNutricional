@@ -1,15 +1,22 @@
+/* Reset de margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Corpo da página */
 body {
     font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5; /* Fundo suave */
+    background-color: #f7f7f7; /* Fundo suave */
     color: #333;
     background-image: url('folhagem.jpg'); /* Caminho para a imagem de folhagens */
     background-size: cover;
     background-position: center;
-    padding-bottom: 80px; /* Espaço para a barra fixa no rodapé */
-    box-sizing: border-box; /* Garante que o padding não ultrapasse os limites */
+    min-height: 100vh; /* Garante que a altura da página ocupe 100% da tela */
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 120px; /* Garantir que o formulário não fique atrás do rodapé */
 }
 
 /* Estilo do formulário */
@@ -17,64 +24,95 @@ form {
     max-width: 600px;
     margin: 30px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
     border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 1;
     background-image: url('folhagem.jpg'); /* Folhagens no fundo do formulário */
     background-size: cover;
     background-position: center;
-    box-sizing: border-box; /* Garante que o padding do formulário não ultrapasse os limites */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Leve borda para destacar */
+    padding-bottom: 20px; /* Para não sobrepor com a barra fixa */
 }
 
-/* Barra de informações fixa no rodapé */
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
+/* Título do formulário */
+h1 {
+    color: #4CAF50;
     text-align: center;
-    padding: 15px;
-    font-size: 14px;
-    z-index: 100;
-    box-sizing: border-box; /* Inclui padding no cálculo do tamanho */
+    font-size: 26px;
+    font-family: 'Georgia', serif; /* Fonte elegante */
+    margin-bottom: 30px;
 }
 
 /* Estilo dos campos do formulário */
 input, select, textarea {
     width: 100%;
-    padding: 12px;
+    padding: 15px;
     margin: 10px 0;
     border: 2px solid #ddd;
     border-radius: 10px;
     font-size: 16px;
-    box-sizing: border-box;
+    background-color: #fff;
+    transition: border-color 0.3s ease-in-out;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Estilo do título do formulário */
-h1 {
-    color: #4CAF50;
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
+/* Estilo dos campos ao focar */
+input:focus, select:focus, textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
 }
 
-/* Estilo dos botões de envio */
+/* Botão de envio */
 button {
-    padding: 14px 30px;
+    padding: 16px 30px;
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 10px;
     font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease-in-out;
+    width: 100%;
 }
 
-/* Efeito ao passar o mouse sobre o botão */
 button:hover {
     background-color: #45a049;
+}
+
+/* Barra de informações fixa no rodapé */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 16px;
+    z-index: 100;
+    font-family: 'Georgia', serif;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
 }
 
